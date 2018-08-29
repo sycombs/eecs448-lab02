@@ -34,10 +34,20 @@ int LinkedList<T>::size() const
 	*/
 	int size = 0;
 	Node<T>* temp = m_front;
-	while (temp != nullptr)
+
+	if (m_front == nullptr)
 	{
-		size++;
+		return(size);
 	}
+
+	else{
+		while (temp != nullptr)
+		{
+			size++;
+			temp = temp->getNext();
+		}
+	}
+
 	return(size);
 }
 
