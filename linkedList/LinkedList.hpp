@@ -67,6 +67,7 @@ bool LinkedList<T>::search(T value) const
 		if (temp->getValue() == value)
 		{
 			isFound = true;
+			return (isFound);
 		}
 		else
 		{
